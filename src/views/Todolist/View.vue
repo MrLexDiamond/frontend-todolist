@@ -26,7 +26,7 @@
             <tr v-for="(todolist, index) in this.todolist" :key="index">
               <td>{{ todolist.id }}</td>
               <td>{{ todolist.tasks }}</td>
-              <td>{{ todolist.status }}</td>
+              <td>{{ todolist.status === 1 ? 'Finish' : 'Not Finish' }}</td>
               <td>{{ todolist.created_at }}</td>
               <td>{{ todolist.updated_at }}</td>
               <td>

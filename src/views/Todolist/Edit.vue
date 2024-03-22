@@ -14,6 +14,12 @@
                     <label for="Tasks">Task Name</label>
                     <input type="text" v-model="model.todolist.tasks" class="form-control"/>
                 </div>
+                <label for="status">Status:</label>
+                <select class="form-select" id="status" v-model="model.todolist.status">
+                    <option disabled value="">Select your Status</option>
+                    <option value="0">Not Finish</option>
+                    <option value="1">Finish</option>
+                </select>
                 <div class="mb-3">
                     <button type="button" @click="updateTodolist" class="btn btn-primary">Update</button>
                 </div>
@@ -34,7 +40,7 @@ export default {
             model: {
                 todolist: {
                     tasks: '',
-                    status: false
+                    status: ''
                 }
             }
         }
